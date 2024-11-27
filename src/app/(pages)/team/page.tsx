@@ -1,12 +1,13 @@
 import React from "react";
-import { team } from "../../../../public/data/people";
-import TeamCard from "@/components/TeamCard";
+import { founders, boardMembers, coreMembers } from "../../../../public/data/people";
 import TeamSection from "@/components/TeamSection";
 
 const Team = () => {
   return (
-    <div className="bg-rich-blue-bg w-full text-white min-h-screen pt-16 sm:pt-8 md:pt-2">
-      <TeamSection team={team} />
+    <div className="bg-gray-900 text-white min-h-screen">
+      <TeamSection title="Founders" team={founders} />
+      <TeamSection title="Board Members" team={boardMembers} />
+      <TeamSection title="Core Members" team={coreMembers} />
     </div>
   );
 };

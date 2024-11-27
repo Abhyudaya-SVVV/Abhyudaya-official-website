@@ -1,28 +1,18 @@
-import { turret } from "@/app/(pages)/page";
+import React from "react";
 import TeamCard from "./TeamCard";
-
-type Person = {
-  id: number;
-  img: string;
-  name: string;
-  post: string;
-};
+import { Team } from "../../public/data/people";
 
 type TeamSectionProps = {
-  team: Array<Person>;
+  title: string;
+  team: Array<Team>;
 };
 
-const TeamSection = ({ team }: TeamSectionProps) => {
-  const isBoardMember = team[0].post === "President";
+const TeamSection = ({ title, team }: TeamSectionProps) => {
   return (
-    <section className="w-11/12 mx-auto flex flex-col items-center gap-y-4 ">
-      <h1
-        className={`text-3xl text-center lg:text-start lg:text-4xl font-bold ${turret.className}`}
-      >
-        {isBoardMember ? "Board Member - Team" : "Our Team"}
-      </h1>
-      <div className="flex justify-center gap-5 md:gap-x-16 md:gap-y-8 flex-wrap ">
-        {team?.map((person) => (
+    <section className="w-full text-center my-10">
+      <h1 className="text-3xl font-bold mb-6">{title}</h1>
+      <div className="flex flex-wrap justify-center gap-6">
+        {team.map((person) => (
           <TeamCard key={person.id} person={person} />
         ))}
       </div>
