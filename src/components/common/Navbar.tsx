@@ -19,13 +19,13 @@ const Navbar = () => {
       <div className="w-11/12 mx-auto flex items-center justify-between">
         <Link href={"./"} className="py-2 flex ">
           <Image
-            src={svvvLogo}
+            src={AbhyudayaLogo}
             className=" md:translate-y-1 h-10 sm:h-20 w-10 sm:w-20"
             alt="Logo"
             
           />
           <Image
-            src={AbhyudayaLogo}
+            src={svvvLogo}
             className="-translate-y-1 h-10 sm:h-20 w-10 sm:w-20"
             alt="Logo"
           />
