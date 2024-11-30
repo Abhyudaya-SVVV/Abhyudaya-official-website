@@ -1,23 +1,36 @@
+import React from "react";
 import Image from "next/image";
-import { turret } from "@/app/(pages)/page";
+import { Team } from "../../public/data/people";
+import { FaLinkedin } from "react-icons/fa"; // Import LinkedIn icon
 
-interface TeamCardProp {
-  person: { id: number; img: string; name: string; post: string };
-}
+type TeamCardProp = {
+  person: Team; // A single Team object
+};
 
 const TeamCard = ({ person }: TeamCardProp) => {
-  const { img, name, post } = person;
+  const { img, name, post, linkedin } = person;
+
   return (
-    <div className="flex flex-col items-center xl:w-64 gap-1 h-[32vw] max-h-[300px] min-h-[200px] sm:min-h-[250px]   w-[35vw] max-w-[250px] text-sm sm:min-w-[150px]">
-      <div className="bg-rich-blue-bgDark border-dashed border-4 rounded-xl border-rich-blue-border overflow-hidden w-full h-full flex flex-col items-center justify-between">
-        <div className="overflow-hidden rounded-full mt-1 sm:mt-2 md:mt-5 max-h-[200px]">
-          <Image src={img} alt={`${name}'s photo`}  objectFit="fill" />
-        </div>
-        <div className="pb-1 sm:pb-2  ">
-        <h2 className={`${turret.className}  font-semibold text-center sm:text-base md:text-lg`}>{name}</h2>
-        <p className="text-center  md:text-base font-light">{post}</p>
-        </div>
+    <div className="bg-rich-blue-bgDark border-dashed border-4 rounded-xl border-rich-blue-border overflow-hidden w-full max-w-sm text-sm p-4 flex flex-col items-center">
+      <div className="w-32 h-32 mb-4">
+        <Image
+          src={img}
+          alt={`${name}'s photo`}
+          width={128}
+          height={128}
+          className="rounded-full object-cover"
+        />
       </div>
+      <h2 className="font-semibold text-lg">{name}</h2>
+      <p className="text-sm font-light">{post}</p>
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full flex items-center justify-center gap-2 shadow-md hover:bg-blue-700 transition-all"
+      >
+        <FaLinkedin className="text-2xl" /> {/* LinkedIn icon */}
+      </a>
     </div>
   );
 };
