@@ -7,7 +7,7 @@ type TeamSectionProps = {
   team: Array<Team>;
 };
 
-const TeamSection = ({ title, team }: TeamSectionProps) => {
+const TeamSection = ({ title, team = []}: TeamSectionProps) => {
   return (
     <section className="w-full text-center my-10">
       <h1 className="text-3xl font-bold mb-6">{title}</h1>

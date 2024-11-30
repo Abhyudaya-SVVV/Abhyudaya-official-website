@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Team } from "../../public/data/people";
+import { FaLinkedin } from "react-icons/fa"; // Import LinkedIn icon
 
 type TeamCardProp = {
   person: Team; // A single Team object
@@ -26,9 +27,9 @@ const TeamCard = ({ person }: TeamCardProp) => {
         href={linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+        className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full flex items-center justify-center gap-2 shadow-md hover:bg-blue-700 transition-all"
       >
-        LinkedIn
+        <FaLinkedin className="text-2xl" /> {/* LinkedIn icon */}
       </a>
     </div>
   );

@@ -9,7 +9,7 @@ import { events } from "../../../public/data/upcomingEvent";
 import DomainRow from "@/components/DomainRow";
 
 import {
-  boardMembers,
+  coreMembers,
   collegeManagement,
   coordinators,
 } from "@/../public/data/people";
@@ -126,7 +126,7 @@ export default function Home() {
       <FacultySection faculties={collegeManagement} />
       <FacultySection faculties={coordinators} />
 
-      <TeamSection title="Board Members" team={boardMembers} />
+      <TeamSection title="Core Team" team={coreMembers} />
       <div className="flex justify-center mt-10">
         <Button linkTo="/team" text="View more" rounded={true} />
       </div>

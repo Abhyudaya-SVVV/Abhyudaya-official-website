@@ -1,3 +1,9 @@
+import kushagra from "../assets/technical/kushagra-rai.png"
+import dhwanil from "../assets/technical/dhwanil.jpg";
+import devang from "../assets/technical/devang.jpg"
+import yashraj from "../assets/technical/Yashraj.svg"
+import raghav from "../assets/technical/Raghav.jpg"
+import samarth from "../assets/technical/samarth.jpg"
 import adityaTiwari from "./../assets/faculty/aditya-tiwari.svg";
 import anandRajavatHodSir from "./../assets/faculty/anand-rajavat-hod.svg";
 import avdheshKumar from "./../assets/faculty/avdhesh-kumar.svg";
@@ -26,7 +32,6 @@ import parikshit from "./../assets/technical/Frame 655.png"
 import nawadha from "./../assets/technical/Frame 656.png"
 import akshara from "./../assets/technical/Frame 657.png"
 import harshita from "./../assets/technical/Frame 658.png"
-import dhwanil from "./../assets/technical/Frame 659.png"
 import nidhi from "./../assets/technical/Frame 660.png"
 import pragya from "./../assets/technical/Frame 661.png"
 import aakash from "./../assets/technical/Frame 662.png"
@@ -97,7 +102,7 @@ export const founders : Array<Team> = [
     img: sanskarChaubey,
     name: "Tanay Nagde",
     post: "President",
-    linkedin: "https://www.linkedin.com/in/tanay-nagde/",
+    linkedin: "https://www.linkedin.com/in/tanay-nagde-17985b1a6/",
   },
   {
     id: 2,
@@ -108,13 +113,13 @@ export const founders : Array<Team> = [
   },
 ];
 
-export const boardMembers : Array<Team> = [
+export const coreMembers : Array<Team> = [
   {
     id: 3,
     img: sanskarChaubey,
     name: "Tanay Nagde",
     post: "President",
-    linkedin: "https://www.linkedin.com/in/tanay-nagde/",
+    linkedin: "https://www.linkedin.com/in/tanay-nagde-17985b1a6/",
   },
   {
     id: 4,
@@ -125,82 +130,110 @@ export const boardMembers : Array<Team> = [
   },
   {
     id: 5,
-    img: parikshit, //add kushagra pic
+    img: kushagra, //add kushagra pic
     name: "Kushagra Rai",
     post: "General Secretary",
-    linkedin: "https://www.linkedin.com/in/kushagra-rai/",
+    linkedin: "https://www.linkedin.com/in/kushagra-raii/",
   },
   {
     id: 6,
     img: aakash,
     name: "Akash Bais",
     post: "Treasurer",
-    linkedin: "https://www.linkedin.com/in/akash-bais/",
+    linkedin: "https://www.linkedin.com/in/bais-akash/",
   },
   {
     id: 7,
     img: ayush,
     name: "Ayush Madhesiya",
     post: "Technical Secretary",
-    linkedin: "https://www.linkedin.com/in/ayush-madhesiya/",
+    linkedin: "https://www.linkedin.com/in/ayush-maddhesiya/",
   },
   {
     id: 8,
     img: dhwanil,
     name: "Dhwanil Bhawsar",
     post: "Administrative Secretary",
-    linkedin: "https://www.linkedin.com/in/dhwanil-bhawsar/",
+    linkedin: "https://www.linkedin.com/in/dhwanilll/",
   },
   {
     id: 9,
     img: nawadha,
     name: "Nawadha Jadiya",
     post: "Development Head",
-    linkedin: "https://www.linkedin.com/in/nawadha-jadiya/",
+    linkedin: "https://www.linkedin.com/in/nawadha-jadiya-aab426253/",
   },
   {
     id: 10,
     img: sneha,
     name: "Sneha Yadav",
     post: "Media Head",
-    linkedin: "https://www.linkedin.com/in/sneha-yadav/",
+    linkedin: "https://www.linkedin.com/in/sneha-yadav-02909021b/",
   },
   {
     id: 11,
-    img: devanshu,//Add devang pic
+    img: devang,
     name: "Devang Sharma",
     post: "Managing Head",
-    linkedin: "https://www.linkedin.com/in/devang-sharma/",
+    linkedin: "https://www.linkedin.com/in/devang-sharma-88aa84288/",
   },
 ];
 
-export const coreMembers : Array<Team> = [
+export const Mentors: Array<Team> = [
   {
-    id: 12,
-    img: aditya,
-    name: "Aditya Patel",
-    post: "Frontend Lead",
-    linkedin: "https://www.linkedin.com/in/aditya-patel/",
+    id: 1,
+    img: shivamSharma, 
+    name: "Shivam Sharma",
+    post: "Mentor",
+    linkedin: "https://www.linkedin.com/in/shivam-sharma-ab489721b/",
   },
   {
-    id: 13,
-    img: mandeep,
-    name: "Mandeep Yadav",
-    post: "Backend Lead",
-    linkedin: "https://www.linkedin.com/in/mandeep-yadav/",
+    id: 2,
+    img: tanayNagde, 
+    name: "Sanskar Choubey",
+    post: "Mentor",
+    linkedin: "https://www.linkedin.com/in/sanskarchoubey14/",
   },
   {
-    id: 14,
-    img: himanshi,
-    name: "Himanshi Laddha",
-    post: "Member",
-    linkedin: "https://www.linkedin.com/in/himanshi-laddha/",
+    id: 3,
+    img: adityaTiwari, 
+    name: "Aditya Tiwari",
+    post: "Mentor",
+    linkedin: "https://www.linkedin.com/in/aditya-tiwari-goltu/",
   },
   {
-    id: 15,
-    img: nidhi,
-    name: "Nidhi Agrawal",
-    post: "Member",
-    linkedin: "https://www.linkedin.com/in/nidhi-agrawal/",
+    id: 4,
+    img: mayank, 
+    name: "Mayank Matkar",
+    post: "Mentor",
+    linkedin: "https://www.linkedin.com/in/mayank-matkar-042003k/",
+  },
+  {
+    id: 5,
+    img: yashraj, 
+    name: "Yashraj Sisodiya",
+    post: "Mentor",
+    linkedin: "https://www.linkedin.com/in/theyashsisodiya/",
+  },
+  {
+    id: 6,
+    img: himanshu, // add Himanshu Agnihotri's image
+    name: "Himanshu Agnihotri",
+    post: "Mentor",
+    linkedin: "https://www.linkedin.com/in/himanshu-agnihotri-776b7b222/",
+  },
+  {
+    id: 7,
+    img: krip, // add Kripansh Kumravat's image
+    name: "Kripansh Kumravat",
+    post: "Mentor",
+    linkedin: "https://www.linkedin.com/in/kripansh29/",
+  },
+  {
+    id: 8,
+    img: nirv, // add Nirvighna Chavan's image
+    name: "Nirvighna Chavan",
+    post: "Mentor",
+    linkedin: "https://www.linkedin.com/in/nirvighna-chavan-650586226/",
   },
 ];
