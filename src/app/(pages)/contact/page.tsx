@@ -1,6 +1,6 @@
 "use client";
 import contact from "@/../public/assets/contact/contact.svg";
-import { turret } from "@/app/(pages)/page";
+import { turretFont } from "@/config/fonts";
 import Image from "next/image";
 import React, { FormEvent, useState } from "react";
 
@@ -41,7 +41,7 @@ const ContactSection = () => {
   return (
     <div className="bg-rich-blue-bg text-white h-screen">
       <section id="contact" className="flex flex-col items-center w-5/6 mx-auto gap-10 pb-8">
-        <h2 className={`${turret.className} text-4xl mt-24 sm:mt-4 font-extrabold`}>
+        <h2 className={`${turretFont.className} text-4xl mt-24 sm:mt-4 font-extrabold`}>
           Contact Us
         </h2>
         <div className="flex justify-center items-center w-full border-2 rounded-[16px] overflow-hidden sm:-mt-10">

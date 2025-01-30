@@ -5,8 +5,8 @@ import SectionDividerLine from "@/components/SectionDividerLine";
 import Button from "@/components/common/Button";
 import Image from "next/image";
 import { domainFirstLine, domainSecondLine } from "../../../public/data/domain";
-import { events } from "../../../public/data/upcomingEvent";
 import DomainRow from "@/components/DomainRow";
+import { Turret_Road } from "next/font/google";
 
 import {
   coreMembers,
@@ -16,10 +16,10 @@ import {
 import Faqs from "@/components/Faqs";
 import ProjectSection from "@/components/ProjectSection";
 import TeamSection from "@/components/TeamSection";
-import { Turret_Road } from "next/font/google";
 import Events from "@/components/Events.tsx/Events";
 
-export const turret = Turret_Road({
+// Move font declaration inside the component
+const turretFont = Turret_Road({
   weight: "800",
   subsets: ["latin"],
 });
@@ -34,7 +34,7 @@ export default function Home() {
         <div className="-mt-10 flex flex-col-reverse md:items-center lg:flex-row gap-10 lg:mt-10">
           <div className="lg:w-3/5 flex flex-col gap-5">
             <h1
-              className={`font-extrabold text-2xl sm:text-4xl xl:text-5xl ${turret.className} myShadow text-primary-heading`}
+              className={`font-extrabold text-2xl sm:text-4xl xl:text-5xl ${turretFont.className} myShadow text-primary-heading`}
             >
               Abhyudaya - Coding club
             </h1>
@@ -63,7 +63,7 @@ export default function Home() {
       >
         <div className="z-10 ">
           <h1
-            className={`text-4xl font-extrabold text-center ${turret.className}`}
+            className={`text-4xl font-extrabold text-center ${turretFont.className}`}
           >
             Our Domains
           </h1>
@@ -79,7 +79,7 @@ export default function Home() {
         id="events"
         className="w-10/12 mx-auto px-3 flex flex-col items-center gap-9 sm:mt-10"
       >
-        <h1 className={`text-4xl font-extrabold ${turret.className}`}>
+        <h1 className={`text-4xl font-extrabold ${turretFont.className}`}>
           Upcoming Events
         </h1>
         <div className="flex justify-center text-2xl">
@@ -95,7 +95,7 @@ export default function Home() {
         id="aboutCollege"
         className=" w-10/12 mx-auto flex flex-col items-center gap-8"
       >
-        <h1 className={`${turret?.className} font-extrabold text-4xl`}>
+        <h1 className={`${turretFont.className} font-extrabold text-4xl`}>
           About college
         </h1>
         <div className="flex gap-x-20 justify-center items-center flex-wrap">
@@ -133,7 +133,7 @@ export default function Home() {
       <SectionDividerLine />
 
       <section id="faqs" className="flex flex-col items-center gap-4">
-        <h1 className={`mx-auto text-3xl font-bold ${turret.className}`}>
+        <h1 className={`mx-auto text-3xl font-bold ${turretFont.className}`}>
           FAQs
         </h1>
         <Faqs />
