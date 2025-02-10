@@ -1,4 +1,4 @@
-import { turret } from "@/app/(pages)/page";
+import { turretFont } from "@/config/fonts";
 import cx from "classnames";
 import Image from "next/image";
 
@@ -19,7 +19,7 @@ const FacultyCard = ({ person, isTopMgmt }: FacultyCardProp) => {
           alt="coordinator-img"
         />
       </div>
-      <h2 className={`${turret.className} font-semibold text-center`}>{name}</h2>
+      <h2 className={`${turretFont.className} font-semibold text-center`}>{name}</h2>
       <p className="text-center">{post}</p>
       </div>
   );

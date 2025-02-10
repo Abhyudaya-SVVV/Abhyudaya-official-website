@@ -1,24 +1,25 @@
 import React from "react";
 import collegeImg from "@/../public/assets/faculty/college-image.svg";
-import EventCard from "@/components/EventCard";
 import FacultySection from "@/components/FacultySection";
 import SectionDividerLine from "@/components/SectionDividerLine";
 import Button from "@/components/common/Button";
 import Image from "next/image";
 import { domainFirstLine, domainSecondLine } from "../../../public/data/domain";
-import { events } from "../../../public/data/upcomingEvent";
 import DomainRow from "@/components/DomainRow";
+import { Turret_Road } from "next/font/google";
 
 import {
-  boardMembers,
+  coreMembers,
   collegeManagement,
   coordinators,
 } from "@/../public/data/people";
 import Faqs from "@/components/Faqs";
 import ProjectSection from "@/components/ProjectSection";
 import TeamSection from "@/components/TeamSection";
-import { Turret_Road } from "next/font/google";
-export const turret = Turret_Road({
+import Events from "@/components/Events.tsx/Events";
+
+// Move font declaration inside the component
+const turretFont = Turret_Road({
   weight: "800",
   subsets: ["latin"],
 });
@@ -33,7 +34,7 @@ export default function Home() {
         <div className="-mt-10 flex flex-col-reverse md:items-center lg:flex-row gap-10 lg:mt-10">
           <div className="lg:w-3/5 flex flex-col gap-5">
             <h1
-              className={`font-extrabold text-2xl sm:text-4xl xl:text-5xl ${turret.className} myShadow text-primary-heading`}
+              className={`font-extrabold text-2xl sm:text-4xl xl:text-5xl ${turretFont.className} myShadow text-primary-heading`}
             >
               Abhyudaya - Coding club
             </h1>
@@ -62,7 +63,7 @@ export default function Home() {
       >
         <div className="z-10 ">
           <h1
-            className={`text-4xl font-extrabold text-center ${turret.className}`}
+            className={`text-4xl font-extrabold text-center ${turretFont.className}`}
           >
             Our Domains
           </h1>
@@ -78,23 +79,15 @@ export default function Home() {
         id="events"
         className="w-10/12 mx-auto px-3 flex flex-col items-center gap-9 sm:mt-10"
       >
-        <h1 className={`text-4xl font-extrabold ${turret.className}`}>
+        <h1 className={`text-4xl font-extrabold ${turretFont.className}`}>
           Upcoming Events
         </h1>
         <div className="flex justify-center text-2xl">
-          {events?.map((item) => {
-            return (
-              <EventCard
-                heading={item.heading}
-                key={item.id}
-                img={item.img}
-                desc={item.desc}
-              />
-            );
-          })}
+          <Events />
         </div>
         <SectionDividerLine />
       </section>
+
       <ProjectSection />
       <SectionDividerLine />
 
@@ -102,28 +95,28 @@ export default function Home() {
         id="aboutCollege"
         className=" w-10/12 mx-auto flex flex-col items-center gap-8"
       >
-        <h1 className={`${turret?.className} font-extrabold text-4xl`}>
+        <h1 className={`${turretFont.className} font-extrabold text-4xl`}>
           About college
         </h1>
         <div className="flex gap-x-20 justify-center items-center flex-wrap">
-          <div className="w-full sm:w-[45%] mb-4 border-8 overflow-hidden  rounded-3xl mt-2 ">
+          <div className="w-full sm:w-[45%] mb-4 border-8 overflow-hidden rounded-3xl mt-2">
             <Image src={collegeImg} alt="" className="w-full" />
           </div>
 
           <div className="flex flex-col gap-10 lg:w-[45%] px-4 mt-4 md:mt-0 md:px-10">
-            <h2 className={`text-2xl font-semibold `}>
+            <h2 className={`text-2xl font-semibold`}>
               Shri Vaishnav Vidyapeeth Vishwavidyalaya
             </h2>
             <p>
               Shri Vaishnav Vidyapeeth Trust believes in taking the nation
               forward by improving the quality of life of its citizens by
               continuously working in the sphere of education, health and
-              environment.To create an educational environment that engages deep
-              intellectual moral and spiritual stimulation there by nurturing
-              leadership. To impact learning through understanding knowledge
-              enrichment skill development and positive attitude formation.To
-              encourage innovation thinking with self discipline & social
-              responsibility.
+              environment. To create an educational environment that engages
+              deep intellectual, moral, and spiritual stimulation, thereby
+              nurturing leadership. To impact learning through understanding,
+              knowledge enrichment, skill development, and positive attitude
+              formation. To encourage innovative thinking with self-discipline
+              and social responsibility.
             </p>
           </div>
         </div>
@@ -133,19 +126,19 @@ export default function Home() {
       <FacultySection faculties={collegeManagement} />
       <FacultySection faculties={coordinators} />
 
-      <TeamSection team={boardMembers} />
+      <TeamSection title="Core Team" team={coreMembers} />
       <div className="flex justify-center mt-10">
         <Button linkTo="/team" text="View more" rounded={true} />
       </div>
       <SectionDividerLine />
+
       <section id="faqs" className="flex flex-col items-center gap-4">
-        <h1 className={`mx-auto text-3xl font-bold ${turret.className}`}>
+        <h1 className={`mx-auto text-3xl font-bold ${turretFont.className}`}>
           FAQs
         </h1>
         <Faqs />
         <SectionDividerLine />
       </section>
-
     </main>
   );
 }
